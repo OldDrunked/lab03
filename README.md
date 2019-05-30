@@ -16,12 +16,15 @@ $ open https://cmake.org/
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>
+# Обьявление необходимых переменных
+$ export GITHUB_USERNAME=<имя_пользователя> 
 ```
 
 ```ShellSession
+# Переход в рабочую директорию
 $ cd ${GITHUB_USERNAME}/workspace
 $ pushd .
+# Исполнение кода из файла
 $ source scripts/activate
 ```
 
