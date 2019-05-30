@@ -15,27 +15,27 @@ $ open https://cmake.org/
 
 ## Tutorial
 
-```ShellSession
+
 # Обьявление необходимых переменных
 $ export GITHUB_USERNAME=<имя_пользователя> 
-```
 
-```ShellSession
+
+
 # Переход в рабочую директорию
 $ cd ${GITHUB_USERNAME}/workspace
 $ pushd .
 # Исполнение кода из файла
 $ source scripts/activate
-```
 
-```ShellSession
+
+# создание копии  репозитория
 $ git clone https://github.com/${GITHUB_USERNAME}/lab02.git projects/lab03
 $ cd projects/lab03
 $ git remote remove origin
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03.git
-```
 
-```ShellSession
+
+
 $ g++ -std=c++11 -I./include -c sources/print.cpp
 $ ls print.o
 $ nm print.o | grep print
@@ -45,17 +45,15 @@ $ g++ -std=c++11 -I./include -c examples/example1.cpp
 $ ls example1.o
 $ g++ example1.o print.a -o example1
 $ ./example1 && echo
-```
 
-```ShellSession
+
 $ g++ -std=c++11 -I./include -c examples/example2.cpp
 $ nm example2.o
 $ g++ example2.o print.a -o example2
 $ ./example2
 $ cat log.txt && echo
-```
 
-```ShellSession
+
 $ rm -rf example1.o example2.o print.o
 $ rm -rf print.a
 $ rm -rf example1 example2
@@ -116,7 +114,7 @@ $ cmake --build _build --target example1
 $ cmake --build _build --target example2
 ```
 
-```ShellSession
+
 $ ls -la _build/libprint.a
 $ _build/example1 && echo
 hello
@@ -124,7 +122,7 @@ $ _build/example2
 $ cat log.txt && echo
 hello
 $ rm -rf log.txt
-```
+
 
 ```ShellSession
 $ git clone https://github.com/tp-labs/lab03 tmp
